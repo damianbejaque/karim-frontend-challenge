@@ -1,5 +1,5 @@
 // src/app/routes/AppRoutes.tsx
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AppShell } from "../layout/AppShell";
 import { PaymentsPage } from "@/features/payments/pages/PaymentsPage";
 import { ReportsPage } from "@/features/reports/pages/ReportsPage";
@@ -8,7 +8,7 @@ import { SettingsPage } from "@/features/settings/pages/SettingsPage";
 
 export function AppRoutes() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AppShell>
         <Routes>
           <Route path="/" element={<Navigate to="/payments" replace />} />
@@ -18,6 +18,6 @@ export function AppRoutes() {
           <Route path="/settings" element={<SettingsPage />} />
         </Routes>
       </AppShell>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
