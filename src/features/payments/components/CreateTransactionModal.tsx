@@ -32,6 +32,8 @@ export default function CreateTransactionModal({
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [showWarning, setShowWarning] = useState(false);
+  const [handleError, setHandleError] = useState(false);
+  const [isAmountFocused, setIsAmountFocused] = useState(false);
   const [touched, setTouched] = useState({
     handle: false,
     amount: false,
@@ -75,14 +77,42 @@ export default function CreateTransactionModal({
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+
+    // For amount field, only allow numeric input
+    if (name === "amount") {
+      // Remove all non-numeric characters except decimal point
+      let numericValue = value.replace(/[^0-9.]/g, "");
+
+      // Ensure only one decimal point
+      const parts = numericValue.split(".");
+      if (parts.length > 2) {
+        numericValue = parts[0] + "." + parts.slice(1).join("");
+      }
+
+      // Limit to 2 decimal places
+      if (parts[1] && parts[1].length > 2) {
+        numericValue = parts[0] + "." + parts[1].slice(0, 2);
+      }
+
+      setFormData((prev) => ({
+        ...prev,
+        [name]: numericValue,
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
+
+    // Clear handle error when user types
+    if (name === "handle") {
+      setHandleError(false);
+    }
 
     // Validate field on change
     if (touched[name as keyof typeof touched]) {
-      const error = validateField(name, value);
+      const error = validateField(name, name === "amount" ? value.replace(/[^0-9.]/g, "") : value);
       setErrors((prev) => ({
         ...prev,
         [name]: error,
@@ -90,10 +120,13 @@ export default function CreateTransactionModal({
     }
 
     // Show warning if fields are filled and valid
-    if (value && formData.handle && formData.amount) {
-      const handleError = validateField("handle", name === "handle" ? value : formData.handle);
-      const amountError = validateField("amount", name === "amount" ? value : formData.amount);
-      setShowWarning(!handleError && !amountError);
+    const currentHandle = name === "handle" ? value : formData.handle;
+    const currentAmount = name === "amount" ? value.replace(/[^0-9.]/g, "") : formData.amount;
+
+    if (currentHandle && currentAmount) {
+      const handleErr = validateField("handle", currentHandle);
+      const amountErr = validateField("amount", currentAmount);
+      setShowWarning(!handleErr && !amountErr && !handleError);
     } else {
       setShowWarning(false);
     }
@@ -101,16 +134,47 @@ export default function CreateTransactionModal({
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
+
+    // Mark field as touched
     setTouched((prev) => ({
       ...prev,
       [name]: true,
     }));
 
+    // Validate the field
     const error = validateField(name, value);
     setErrors((prev) => ({
       ...prev,
       [name]: error,
     }));
+
+    // Handle amount field blur
+    if (name === "amount") {
+      setIsAmountFocused(false);
+    }
+  };
+
+  const handleAmountFocus = () => {
+    setIsAmountFocused(true);
+  };
+
+  // Get formatted amount for display
+  const getDisplayAmount = () => {
+    if (isAmountFocused || !formData.amount) {
+      return formData.amount;
+    }
+
+    const num = parseFloat(formData.amount);
+    if (isNaN(num)) {
+      return formData.amount;
+    }
+
+    return new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(num);
   };
 
   const validateForm = (): boolean => {
@@ -133,12 +197,19 @@ export default function CreateTransactionModal({
       return;
     }
 
+    // Check for specific handle that should fail
+    if (formData.handle === "rail-wallet-negative-balance-02") {
+      setHandleError(true);
+      setShowWarning(false);
+      return;
+    }
+
     // Simulate API call
     console.log("Form data:", formData);
 
     // Call success callback
     if (onSuccess) {
-      onSuccess("Transacción creada exitosamente");
+      onSuccess("Transacción creada exitosamente", "La transacción se ha procesado correctamente.");
     }
 
     // Reset and close
@@ -155,6 +226,8 @@ export default function CreateTransactionModal({
     setErrors({});
     setTouched({ handle: false, amount: false });
     setShowWarning(false);
+    setHandleError(false);
+    setIsAmountFocused(false);
     onClose();
   };
 
@@ -188,14 +261,36 @@ export default function CreateTransactionModal({
             error={errors.handle}
           />
 
+          {/* Handle Error Message */}
+          {handleError && (
+            <div className="mt-[-12px] flex items-start gap-2">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                className="mt-0.5 shrink-0"
+              >
+                <path
+                  d="M8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0ZM8 4C8.55228 4 9 4.44772 9 5V8C9 8.55228 8.55228 9 8 9C7.44772 9 7 8.55228 7 8V5C7 4.44772 7.44772 4 8 4ZM8 12C7.44772 12 7 11.5523 7 11C7 10.4477 7.44772 10 8 10C8.55228 10 9 10.4477 9 11C9 11.5523 8.55228 12 8 12Z"
+                  fill="#F04438"
+                />
+              </svg>
+              <p className="text-error-500 text-sm leading-5 font-normal">
+                Este handle no existe o está deshabilitado. Verifica la información nuevamente.
+              </p>
+            </div>
+          )}
+
           {/* Amount Field */}
           <Input
             label="Monto"
             name="amount"
             type="text"
-            value={formData.amount}
+            value={getDisplayAmount()}
             onChange={handleInputChange}
             onBlur={handleBlur}
+            onFocus={handleAmountFocus}
             placeholder="$0.00"
             error={errors.amount}
           />

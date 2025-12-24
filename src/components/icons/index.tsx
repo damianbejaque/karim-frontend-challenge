@@ -4,13 +4,7 @@ interface IconProps {
 }
 
 export const ChartIcon = ({ className, size = 24 }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    className={className}
-  >
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
     <path
       d="M18.75 6.08333C17.8248 4.78165 16.6147 3.75 14.7282 3.75C6.2181 3.75 10.6694 18.25 2.75 18.25"
       stroke="#225D67"
@@ -27,13 +21,7 @@ export const ChartIcon = ({ className, size = 24 }: IconProps) => (
 );
 
 export const FileIcon = ({ className, size = 24 }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    className={className}
-  >
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
     <path
       d="M0.75 8.75C0.75 4.97876 0.75 3.09315 1.9948 1.92157C3.23959 0.75 5.24306 0.75 9.25 0.75H10.0227C13.2839 0.75 14.9145 0.75 16.0469 1.54784C16.3714 1.77643 16.6594 2.04752 16.9023 2.35289C17.75 3.41867 17.75 4.95336 17.75 8.02273V10.5682C17.75 13.5314 17.75 15.0129 17.2811 16.1962C16.5272 18.0986 14.9329 19.5991 12.9116 20.3086C11.6544 20.75 10.0802 20.75 6.93182 20.75C5.13275 20.75 4.23322 20.75 3.51478 20.4978C2.35979 20.0924 1.44875 19.2349 1.01796 18.1479C0.75 17.4717 0.75 16.6251 0.75 14.9318V8.75Z"
       stroke="#717680"
@@ -65,13 +53,7 @@ export const FileIcon = ({ className, size = 24 }: IconProps) => (
 );
 
 export const LifebuoyIcon = ({ className, size = 24 }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    className={className}
-  >
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
     <path
       d="M4.93 4.93L9.17 9.17M14.83 14.83L19.07 19.07M19.07 4.93L14.83 9.17L18.36 5.64M4.93 19.07L9.17 14.83M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z"
       stroke="#717680"
@@ -83,13 +65,7 @@ export const LifebuoyIcon = ({ className, size = 24 }: IconProps) => (
 );
 
 export const SettingsIcon = ({ className, size = 24 }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    className={className}
-  >
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
     <g clip-path="url(#clip0_4617_40479)">
       <path
         d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
@@ -115,13 +91,7 @@ export const SettingsIcon = ({ className, size = 24 }: IconProps) => (
 );
 
 export const SearchIcon = ({ className, size = 20 }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 20 20"
-    fill="none"
-    className={className}
-  >
+  <svg width={size} height={size} viewBox="0 0 20 20" fill="none" className={className}>
     <path
       d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
       stroke="#717680"
@@ -132,13 +102,7 @@ export const SearchIcon = ({ className, size = 20 }: IconProps) => (
   </svg>
 );
 export const CalendarIcon = ({ className, size = 20 }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 20 20"
-    fill="none"
-    className={className}
-  >
+  <svg width={size} height={size} viewBox="0 0 20 20" fill="none" className={className}>
     <path
       d="M11.6693 0.834961V4.16829M5.0026 0.834961V4.16829M0.835938 7.50163H15.8359M2.5026 2.50163H14.1693C15.0897 2.50163 15.8359 3.24782 15.8359 4.16829V15.835C15.8359 16.7554 15.0897 17.5016 14.1693 17.5016H2.5026C1.58213 17.5016 0.835938 16.7554 0.835938 15.835V4.16829C0.835938 3.24782 1.58213 2.50163 2.5026 2.50163Z"
       stroke="#15393F"
@@ -150,13 +114,7 @@ export const CalendarIcon = ({ className, size = 20 }: IconProps) => (
 );
 
 export const MoreVerticalIcon = ({ className, size = 20 }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 20 20"
-    fill="none"
-    className={className}
-  >
+  <svg width={size} height={size} viewBox="0 0 20 20" fill="none" className={className}>
     <path
       d="M9.99935 10.833C10.4596 10.833 10.8327 10.4599 10.8327 9.99967C10.8327 9.53944 10.4596 9.16634 9.99935 9.16634C9.53911 9.16634 9.16602 9.53944 9.16602 9.99967C9.16602 10.4599 9.53911 10.833 9.99935 10.833Z"
       stroke="#15393F"
@@ -182,13 +140,7 @@ export const MoreVerticalIcon = ({ className, size = 20 }: IconProps) => (
 );
 
 export const DownloadIcon = ({ className, size = 20 }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 20 20"
-    fill="none"
-    className={className}
-  >
+  <svg width={size} height={size} viewBox="0 0 20 20" fill="none" className={className}>
     <g clip-path="url(#clip0_4668_321)">
       <path
         d="M6.66698 14.1666L10.0003 17.4999M10.0003 17.4999L13.3336 14.1666M10.0003 17.4999V9.99994M17.4003 15.0749C18.1248 14.5655 18.6681 13.8384 18.9514 12.9992C19.2347 12.1601 19.2432 11.2525 18.9756 10.4081C18.7081 9.56381 18.1785 8.82669 17.4637 8.30375C16.7489 7.78081 15.886 7.49925 15.0003 7.49994H13.9503C13.6997 6.52317 13.2307 5.61598 12.5787 4.84668C11.9268 4.07737 11.1088 3.46599 10.1863 3.05857C9.26387 2.65115 8.26101 2.4583 7.25325 2.49454C6.24548 2.53078 5.25907 2.79517 4.36827 3.2678C3.47747 3.74043 2.7055 4.40898 2.11047 5.22314C1.51544 6.03729 1.11285 6.97582 0.933028 7.96807C0.753202 8.96032 0.800819 9.98044 1.07229 10.9516C1.34377 11.9228 1.83203 12.8198 2.50031 13.5749"
@@ -207,13 +159,7 @@ export const DownloadIcon = ({ className, size = 20 }: IconProps) => (
 );
 
 export const LogoutIcon = ({ className, size = 20 }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 20 20"
-    fill="none"
-    className={className}
-  >
+  <svg width={size} height={size} viewBox="0 0 20 20" fill="none" className={className}>
     <path
       d="M7.5 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H7.5M13.3333 14.1667L17.5 10M17.5 10L13.3333 5.83333M17.5 10H7.5"
       stroke="#717680"
@@ -225,16 +171,10 @@ export const LogoutIcon = ({ className, size = 20 }: IconProps) => (
 );
 
 export const ArrowDownIcon = ({ className, size = 11 }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 11 11"
-    fill="none"
-    className={className}
-  >
+  <svg width={size} height={size} viewBox="0 0 16 16" fill="none" className={className}>
     <path
       d="M8.00065 3.33301V12.6663M8.00065 12.6663L12.6673 7.99967M8.00065 12.6663L3.33398 7.99967"
-      stroke="#535862"
+      stroke="currentColor"
       stroke-width="1.33333"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -243,34 +183,31 @@ export const ArrowDownIcon = ({ className, size = 11 }: IconProps) => (
 );
 
 export const InfoIcon = ({ className, size = 16 }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 16 16"
-    fill="none"
-    className={className}
-  >
-   <g clip-path="url(#clip0_4618_16247)">
-    <path d="M8 0C6.41775 0 4.87104 0.469192 3.55544 1.34824C2.23985 2.22729 1.21447 3.47672 0.608967 4.93853C0.00346629 6.40034 -0.15496 8.00887 0.153721 9.56072C0.462403 11.1126 1.22433 12.538 2.34315 13.6569C3.46197 14.7757 4.88743 15.5376 6.43928 15.8463C7.99113 16.155 9.59966 15.9965 11.0615 15.391C12.5233 14.7855 13.7727 13.7602 14.6518 12.4446C15.5308 11.129 16 9.58225 16 8C15.9977 5.87897 15.1541 3.84547 13.6543 2.34568C12.1545 0.845886 10.121 0.00229405 8 0V0ZM8 14.6667C6.68146 14.6667 5.39253 14.2757 4.2962 13.5431C3.19987 12.8106 2.34539 11.7694 1.84081 10.5512C1.33622 9.33305 1.2042 7.99261 1.46144 6.6994C1.71867 5.40619 2.35361 4.21831 3.28596 3.28596C4.21831 2.35361 5.4062 1.71867 6.6994 1.46143C7.99261 1.2042 9.33305 1.33622 10.5512 1.8408C11.7694 2.34539 12.8106 3.19987 13.5431 4.2962C14.2757 5.39253 14.6667 6.68146 14.6667 8C14.6647 9.76752 13.9617 11.4621 12.7119 12.7119C11.4621 13.9617 9.76752 14.6647 8 14.6667Z" fill="#14201B"/>
-    <path d="M7.99935 6.66699H7.33268C7.15587 6.66699 6.9863 6.73723 6.86128 6.86225C6.73625 6.98728 6.66602 7.15685 6.66602 7.33366C6.66602 7.51047 6.73625 7.68004 6.86128 7.80506C6.9863 7.93009 7.15587 8.00033 7.33268 8.00033H7.99935V12.0003C7.99935 12.1771 8.06958 12.3467 8.19461 12.4717C8.31963 12.5968 8.4892 12.667 8.66601 12.667C8.84282 12.667 9.01239 12.5968 9.13742 12.4717C9.26244 12.3467 9.33268 12.1771 9.33268 12.0003V8.00033C9.33268 7.6467 9.1922 7.30757 8.94215 7.05752C8.69211 6.80747 8.35297 6.66699 7.99935 6.66699Z" fill="#14201B"/>
-    <path d="M8 5.33301C8.55228 5.33301 9 4.88529 9 4.33301C9 3.78072 8.55228 3.33301 8 3.33301C7.44772 3.33301 7 3.78072 7 4.33301C7 4.88529 7.44772 5.33301 8 5.33301Z" fill="#14201B"/>
-  </g>
-  <defs>
-    <clipPath id="clip0_4618_16247">
-      <rect width="16" height="16" fill="white"/>
-    </clipPath>
-  </defs>
+  <svg width={size} height={size} viewBox="0 0 16 16" fill="none" className={className}>
+    <g clip-path="url(#clip0_4618_16247)">
+      <path
+        d="M8 0C6.41775 0 4.87104 0.469192 3.55544 1.34824C2.23985 2.22729 1.21447 3.47672 0.608967 4.93853C0.00346629 6.40034 -0.15496 8.00887 0.153721 9.56072C0.462403 11.1126 1.22433 12.538 2.34315 13.6569C3.46197 14.7757 4.88743 15.5376 6.43928 15.8463C7.99113 16.155 9.59966 15.9965 11.0615 15.391C12.5233 14.7855 13.7727 13.7602 14.6518 12.4446C15.5308 11.129 16 9.58225 16 8C15.9977 5.87897 15.1541 3.84547 13.6543 2.34568C12.1545 0.845886 10.121 0.00229405 8 0V0ZM8 14.6667C6.68146 14.6667 5.39253 14.2757 4.2962 13.5431C3.19987 12.8106 2.34539 11.7694 1.84081 10.5512C1.33622 9.33305 1.2042 7.99261 1.46144 6.6994C1.71867 5.40619 2.35361 4.21831 3.28596 3.28596C4.21831 2.35361 5.4062 1.71867 6.6994 1.46143C7.99261 1.2042 9.33305 1.33622 10.5512 1.8408C11.7694 2.34539 12.8106 3.19987 13.5431 4.2962C14.2757 5.39253 14.6667 6.68146 14.6667 8C14.6647 9.76752 13.9617 11.4621 12.7119 12.7119C11.4621 13.9617 9.76752 14.6647 8 14.6667Z"
+        fill="#14201B"
+      />
+      <path
+        d="M7.99935 6.66699H7.33268C7.15587 6.66699 6.9863 6.73723 6.86128 6.86225C6.73625 6.98728 6.66602 7.15685 6.66602 7.33366C6.66602 7.51047 6.73625 7.68004 6.86128 7.80506C6.9863 7.93009 7.15587 8.00033 7.33268 8.00033H7.99935V12.0003C7.99935 12.1771 8.06958 12.3467 8.19461 12.4717C8.31963 12.5968 8.4892 12.667 8.66601 12.667C8.84282 12.667 9.01239 12.5968 9.13742 12.4717C9.26244 12.3467 9.33268 12.1771 9.33268 12.0003V8.00033C9.33268 7.6467 9.1922 7.30757 8.94215 7.05752C8.69211 6.80747 8.35297 6.66699 7.99935 6.66699Z"
+        fill="#14201B"
+      />
+      <path
+        d="M8 5.33301C8.55228 5.33301 9 4.88529 9 4.33301C9 3.78072 8.55228 3.33301 8 3.33301C7.44772 3.33301 7 3.78072 7 4.33301C7 4.88529 7.44772 5.33301 8 5.33301Z"
+        fill="#14201B"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_4618_16247">
+        <rect width="16" height="16" fill="white" />
+      </clipPath>
+    </defs>
   </svg>
 );
 
 export const XIcon = ({ className, size = 20 }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 20 20"
-    fill="none"
-    className={className}
-  >
+  <svg width={size} height={size} viewBox="0 0 20 20" fill="none" className={className}>
     <path
       d="M15 5L5 15M5 5L15 15"
       stroke="currentColor"
@@ -282,13 +219,7 @@ export const XIcon = ({ className, size = 20 }: IconProps) => (
 );
 
 export const ChevronDownIcon = ({ className, size = 20 }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 20 20"
-    fill="none"
-    className={className}
-  >
+  <svg width={size} height={size} viewBox="0 0 20 20" fill="none" className={className}>
     <path
       d="M5 7.5L10 12.5L15 7.5"
       stroke="currentColor"
@@ -300,13 +231,7 @@ export const ChevronDownIcon = ({ className, size = 20 }: IconProps) => (
 );
 
 export const AlertTriangleIcon = ({ className, size = 20 }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 20 20"
-    fill="none"
-    className={className}
-  >
+  <svg width={size} height={size} viewBox="0 0 20 20" fill="none" className={className}>
     <path
       d="M8.57465 3.21508L1.51632 15.0001C1.37079 15.2524 1.29379 15.5377 1.29298 15.8284C1.29216 16.119 1.36756 16.4048 1.51167 16.6579C1.65579 16.9109 1.86359 17.1227 2.11441 17.2714C2.36523 17.4201 2.64993 17.5005 2.94049 17.5051H17.0572C17.3477 17.5005 17.6324 17.4201 17.8832 17.2714C18.134 17.1227 18.3418 16.9109 18.4859 16.6579C18.6301 16.4048 18.7055 16.119 18.7046 15.8284C18.7038 15.5377 18.6268 15.2524 18.4813 15.0001L11.4238 3.21508C11.274 2.97123 11.0639 2.76925 10.8133 2.62872C10.5627 2.48819 10.2799 2.41406 9.99215 2.41406C9.70442 2.41406 9.42158 2.48819 9.17098 2.62872C8.92038 2.76925 8.71029 2.97123 8.56049 3.21508H8.57465Z"
       stroke="#D97706"
@@ -332,13 +257,7 @@ export const AlertTriangleIcon = ({ className, size = 20 }: IconProps) => (
 );
 
 export const FilterIcon = ({ className, size = 20 }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 20 20"
-    fill="none"
-    className={className}
-  >
+  <svg width={size} height={size} viewBox="0 0 20 20" fill="none" className={className}>
     <path
       d="M5 10H15M2.5 5H17.5M7.5 15H12.5"
       stroke="currentColor"
@@ -350,13 +269,7 @@ export const FilterIcon = ({ className, size = 20 }: IconProps) => (
 );
 
 export const ArrowLeftIcon = ({ className, size = 20 }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 20 20"
-    fill="none"
-    className={className}
-  >
+  <svg width={size} height={size} viewBox="0 0 20 20" fill="none" className={className}>
     <path
       d="M15.8337 10H4.16699M4.16699 10L10.0003 15.8333M4.16699 10L10.0003 4.16667"
       stroke="currentColor"
@@ -368,13 +281,7 @@ export const ArrowLeftIcon = ({ className, size = 20 }: IconProps) => (
 );
 
 export const ArrowRightIcon = ({ className, size = 20 }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 20 20"
-    fill="none"
-    className={className}
-  >
+  <svg width={size} height={size} viewBox="0 0 20 20" fill="none" className={className}>
     <path
       d="M4.16699 10H15.8337M15.8337 10L10.0003 4.16667M15.8337 10L10.0003 15.8333"
       stroke="currentColor"
@@ -384,4 +291,3 @@ export const ArrowRightIcon = ({ className, size = 20 }: IconProps) => (
     />
   </svg>
 );
-

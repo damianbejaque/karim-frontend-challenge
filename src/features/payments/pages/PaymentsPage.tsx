@@ -11,11 +11,12 @@ export const PaymentsPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [toast, setToast] = useState<{
     message: string;
+    subMessage?: string;
     type: "success" | "error";
   } | null>(null);
 
-  const handleSuccess = (message: string) => {
-    setToast({ message, type: "success" });
+  const handleSuccess = (message: string, subMessage?: string) => {
+    setToast({ message, subMessage, type: "success" });
   };
 
   const handleCloseToast = () => {
@@ -23,7 +24,7 @@ export const PaymentsPage = () => {
   };
 
   return (
-    <div className="bg-gray-25 flex w-full flex-col gap-6 px-4 pt-6 pb-12 sm:gap-8 sm:pt-8 lg:px-0">
+    <div className="bg-gray-25 flex w-full flex-col gap-6 px-4 pt-6 sm:gap-8 sm:pt-8 lg:px-0">
       <div className="w-full">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row">
           <div className="flex-1">
@@ -40,10 +41,12 @@ export const PaymentsPage = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-full flex-col gap-4 sm:flex-row">
-        <StatCard title="Saldo en tu cuenta *8495" value="$23.421.350" />
-        <StatCard title="Pagos este mes" value="15" showInfo={true} />
-        <StatCard title="Total pagos este mes" value="$6.026.800" />
+      <div className="scrollbar-hide w-full overflow-x-auto">
+        <div className="flex min-w-min gap-4 sm:flex-row">
+          <StatCard title="Saldo en tu cuenta *8495" value="$23.421.350" />
+          <StatCard title="Pagos este mes" value="15" showInfo={true} />
+          <StatCard title="Total pagos este mes" value="$6.026.800" />
+        </div>
       </div>
 
       <div className="flex w-full items-center justify-between gap-4">
@@ -68,6 +71,7 @@ export const PaymentsPage = () => {
       {toast && (
         <Toast
           message={toast.message}
+          subMessage={toast.subMessage}
           type={toast.type}
           isVisible={!!toast}
           onClose={handleCloseToast}
