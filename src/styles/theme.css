@@ -1,0 +1,65 @@
+
+
+@theme {
+  --color-brand-700: #19332D;
+  --color-brand-800: #225D67;
+  --color-brand-900: #15393F;
+
+  --color-gray-25: #FDFDFD;
+  --color-gray-50: #FAFAFA;
+  --color-gray-200: #E9EAEB;
+  --color-gray-300: #D5D7DA;
+  --color-gray-500: #717680;
+  --color-gray-600: #535862;
+  --color-gray-700: #414651;
+  --color-gray-900: #181D27;
+
+  --color-kalto-black: #14201B;
+  --color-kalto-black-green-400: #7C8580;
+  --color-kalto-green-600: #5AA95F;
+  --color-kalto-white: #FFFFFF;
+
+  --color-warning-50: #FFFAEB;
+  --color-warning-500: #F79009;
+  --color-warning-700: #B54708;
+  
+  --color-success-50: #ECFDF3;
+  --color-success-500: #8AB58B;
+  --color-success-700: #027A48;
+  
+  --color-error-50: #FEF3F2;
+  --color-error-500: #F04438;
+  --color-error-700: #B42318;
+  
+  --font-abyssinica: 'Abyssinica SIL', Georgia, serif;
+  --font-aeonik: 'Aeonik', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-aeonik-trial: 'Aeonik TRIAL', 'Aeonik', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-roboto-mono: 'Roboto Mono', Menlo, Monaco, monospace;
+  
+  --text-title: 1.75rem;
+  --text-title--line-height: 1;
+  --text-title--letter-spacing: -0.04em;
+  --text-title--font-weight: 400;
+  
+  --text-h6: 1.0625rem;
+  --text-h6--line-height: 1.2;
+  --text-h6--letter-spacing: 0.005em;
+  --text-h6--font-weight: 500;
+  
+  --text-display-sm: 1.875rem;
+  --text-display-sm--line-height: 2.375rem;
+  --text-display-sm--letter-spacing: 0;
+  --text-display-sm--font-weight: 600;
+  
+  --text-body-sm: 0.875rem;
+  --text-body-sm--line-height: 1.2;
+  --text-body-sm--letter-spacing: 0.005em;
+  --text-body-sm--font-weight: 400;
+  
+  --text-body-md: 1rem;
+  --text-body-md--line-height: 1.5rem;
+  --text-body-md--letter-spacing: 0;
+  --text-body-md--font-weight: 400;
+  
+  --animate-slide-in: slide-in 0.3s ease-out;
+}
