@@ -53,7 +53,7 @@ export default function CreateTransactionModal({
 
   const validateField = (name: string, value: string): string | undefined => {
     switch (name) {
-      case "handle":
+      case "handle": {
         if (!value.trim()) {
           return "El handle es requerido";
         }
@@ -61,7 +61,8 @@ export default function CreateTransactionModal({
           return "El handle debe tener al menos 3 caracteres";
         }
         return undefined;
-      case "amount":
+      }
+      case "amount": {
         if (!value.trim()) {
           return "El monto es requerido";
         }
@@ -70,6 +71,7 @@ export default function CreateTransactionModal({
           return "El monto debe ser mayor a 0";
         }
         return undefined;
+      }
       default:
         return undefined;
     }
@@ -209,7 +211,7 @@ export default function CreateTransactionModal({
 
     // Call success callback
     if (onSuccess) {
-      onSuccess("Transacción creada exitosamente", "La transacción se ha procesado correctamente.");
+      onSuccess("Transacción creada exitosamente");
     }
 
     // Reset and close

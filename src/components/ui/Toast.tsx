@@ -51,6 +51,24 @@ export default function Toast({
       icon: "text-green-600",
       IconComponent: CheckCircleIcon,
     },
+    error: {
+      bg: "bg-white",
+      border: "border-gray-200",
+      icon: "text-error-500",
+      IconComponent: CheckCircleIcon,
+    },
+    warning: {
+      bg: "bg-white",
+      border: "border-gray-200",
+      icon: "text-warning-500",
+      IconComponent: CheckCircleIcon,
+    },
+    info: {
+      bg: "bg-white",
+      border: "border-gray-200",
+      icon: "text-brand-900",
+      IconComponent: CheckCircleIcon,
+    },
   };
 
   const style = typeStyles[type];
